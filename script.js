@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectNumber = document.querySelector(".project-number");
 
     const projectURLs = {
-        "PanaGhar Website": "https://www.behance.net/gallery/your-panaghar-project",
-        "Hamro Asraya Website": "https://www.behance.net/gallery/your-asraya-project",
+        "PanaGhar Website": "https://www.behance.net/gallery/230000565/PanaGhar-Book-Rental-Website",
+        "Hamro Asraya Website": "https://www.behance.net/gallery/230000257/Hamro-Asraya-Student-Rental-Website",
     };
 
     function updateProjectInfo(item) {

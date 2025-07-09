@@ -609,8 +609,8 @@ body {
 }
 
 #projectLink:hover {
-    text-decoration: underline;
     cursor: pointer;
+    transform: scale(1.02);
 }
 
 /* Loading animations */
