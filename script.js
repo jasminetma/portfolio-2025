@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectNumber = document.querySelector(".project-number");
 
     const projectURLs = {
-        "PanaGhar Website": "https://www.behance.net/gallery/230000565/PanaGhar-Book-Rental-Website",
-        "Hamro Asraya Website": "https://www.behance.net/gallery/230000257/Hamro-Asraya-Student-Rental-Website",
+        "PanaGhar Website": "https://www.figma.com/design/LzIDGEytUFaner7zxl11Yh/PanaGhar---Book-Rental-Website?node-id=0-1&t=5C5NDzOeWaLvysAD-1",
+        "Hamro Asraya Website": "https://www.figma.com/design/n7MUpTIvTum7EZMTNrJkqw/Hamro-Asraya--Hostel-Rental-Website?node-id=0-1&t=57EsFSKvNGs7RKLR-https://www.figma.com/design/n7MUpTIvTum7EZMTNrJkqw/Hamro-Asraya--Hostel-Rental-Website?node-id=0-1&t=6Deqcw3caFBXPswN-1",
     };
 
     function updateProjectInfo(item) {

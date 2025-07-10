@@ -446,7 +446,6 @@ body {
 
 .contact-item:hover {
     color: #9f6d3d;
-    background-color: rgba(159, 109, 61, 0.1);
 }
 
 .contact-dot {
@@ -611,6 +610,9 @@ body {
 #projectLink:hover {
     cursor: pointer;
     transform: scale(1.02);
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    margin-top: auto;
 }
 
 /* Loading animations */
