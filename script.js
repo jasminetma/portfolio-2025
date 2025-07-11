@@ -48,25 +48,21 @@ document.addEventListener("DOMContentLoaded", () => {
     // Portfolio functionality
     const portfolioItems = document.querySelectorAll(".portfolio-item");
     const projectName = document.getElementById("projectName");
-    const projectLink = document.getElementById("projectLink");
     const projectTags = document.getElementById("projectTags");
     const projectDescription = document.getElementById("projectDescription");
     const projectNumber = document.querySelector(".project-number");
-
-    const projectURLs = {
-        "PanaGhar Website": "https://www.figma.com/design/LzIDGEytUFaner7zxl11Yh/PanaGhar---Book-Rental-Website?node-id=0-1&t=5C5NDzOeWaLvysAD-1",
-        "Hamro Asraya Website": "https://www.figma.com/design/n7MUpTIvTum7EZMTNrJkqw/Hamro-Asraya--Hostel-Rental-Website?node-id=0-1&t=57EsFSKvNGs7RKLR-https://www.figma.com/design/n7MUpTIvTum7EZMTNrJkqw/Hamro-Asraya--Hostel-Rental-Website?node-id=0-1&t=6Deqcw3caFBXPswN-1",
-    };
+    const figmaLink = document.getElementById("figmaLink");
 
     function updateProjectInfo(item) {
         const number = item.getAttribute("data-project-number");
         const name = item.getAttribute("data-project-name");
         const tags = item.getAttribute("data-project-tags").split(",");
         const description = item.getAttribute("data-project-description");
+        const figmaUrl = item.getAttribute("data-figma-url");
 
         projectNumber.textContent = number;
         projectName.textContent = name;
-        projectLink.href = projectURLs[name] || "#";
+        figmaLink.href = figmaUrl || "#";
 
         projectTags.innerHTML = "";
         tags.forEach((tag) => {
@@ -107,9 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
-            if (this.id === "projectLink" && this.href !== "#") {
-                return;
-            }
             e.preventDefault();
             const target = document.querySelector(this.getAttribute("href"));
             if (target) {
