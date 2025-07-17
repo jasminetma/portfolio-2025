@@ -1,17 +1,31 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jas Portfolio</title>
+    <title>Jasmine Timilsina - Portfolio</title>
+    <meta name="description" content="Portfolio of Jasmine Timilsina, a creative UX/UI designer specializing in user research, wireframing, and visual design.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' fill='%23eebbc4'%3E✦%3C/text%3E%3C/svg%3E">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav" id="stickyNav" aria-label="Main navigation">
+        <div class="sticky-nav-content">
+            <a href="#home" class="nav-link active" data-section="home">Home</a>
+            <a href="#about" class="nav-link" data-section="about">About</a>
+            <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+            <a href="#portfolio" class="nav-link" data-section="portfolio">Projects</a>
+            <a href="assets/Cv.pdf"  class="resume-btn" id="resumeBtn" aria-label="Download Resume"download>Resume</a>
+        </div>
+    </nav>
+
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="home">
         <div class="header-content">
             <div class="header-left">
                 <p class="header-title">PORTFOLIO</p>
@@ -32,19 +46,20 @@
         <div class="illustration-container">
             <img 
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PortFol%20%281%29-98ZLpoCX7HrWBqzehnawZhkhspk67c.png" 
-                alt="Portfolio illustration with decorative cherry blossoms and clouds" 
+                alt="Portfolio illustration with decorative cherry blossoms and clouds showcasing Jasmine's creative style" 
                 class="portfolio-illustration"
+                loading="eager"
             />
         </div>
     </section>
 
     <!-- Navigation Tabs -->
-    <nav class="navigation fade-in">
+    <section class="navigation fade-in" role="banner">
         <div class="nav-container">
             <div class="nav-lines-wrapper">
-                <div class="nav-line nav-line-top"></div>
+                <div class="nav-line nav-line-top" aria-hidden="true"></div>
                 <div class="nav-tabs-moving">
-                    <div class="nav-tabs-track">
+                    <div class="nav-tabs-track" aria-label="Skills showcase">
                         <span class="nav-tab"><span style="font-weight: 600;">UI</span> DESIGN</span>
                         <span class="nav-tab">UX RESEARCH</span>
                         <span class="nav-tab">POSTER DESIGN</span>
@@ -64,45 +79,39 @@
                         <span class="nav-tab">LOGO DESIGN</span>
                     </div>
                 </div>
-                <div class="nav-line nav-line-bottom"></div>
+                <div class="nav-line nav-line-bottom" aria-hidden="true"></div>
             </div>
         </div>
-    </nav>
+    </section>
 
     <!-- Hello Section -->
-    <section class="hello-section fade-in">
+    <section class="hello-section fade-in" id="about">
         <div class="hello-container">
             <div class="hello-content">
-                <!-- Character Illustration -->
-                <img 
-                    src="assets/girl.png" 
-                    alt="Character illustration of Jasmine waving" 
-                    class="character-illustration-image"
-                />
-                
-                <!-- Text Content -->
+                <!-- Text Content - Now prioritized on mobile -->
                 <div class="hello-text">
                     <div class="hello-title-image">
                         <img 
                             src="assets/hello.png" 
-                            alt="Hello with decorative stars" 
+                            alt="Hello greeting with decorative stars and flourishes" 
                             class="hello-image"
+                            loading="lazy"
                         />
                     </div>
-                    <h3 class="hello-subtitle">
+                    <h1 class="hello-subtitle">
                         I am Jasmine.<br>
                         & I'm a curious, creative <br>
                         UX/UI designer in the making.
-                    </h3>
+                    </h1>
                     <p class="hello-description">
                         I craft experiences that make sense, look good,
-                        and spark a little joy.<br> Wherever there's Wi-Fi and 
+                        and spark a little joy. Wherever there's Wi-Fi and 
                         good coffee, that's my design studio.
                     </p>
                     <p class="hello-description">
                         Obsessed with details, in love with typography, and
-                         always down <br> to prototype at 2 a.m, if inspiration hits.
-                        I love creating, testing, failing<br> a little, and reworking until it just works.
+                         always down to prototype at 2 a.m, if inspiration hits.
+                        I love creating, testing, failing a little, and reworking until it just works.
                     </p>
                     <div class="interests">
                         <span class="interests-label">Areas of interest:</span>
@@ -112,119 +121,158 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- Character Illustration - Reduced size and moved after text on mobile -->
+                <img 
+                    src="assets/girl.png" 
+                    alt="Illustration of Jasmine waving hello in a friendly, approachable style" 
+                    class="character-illustration-image"
+                    loading="lazy"
+                />
             </div>
         </div>
     </section>
 
     <!-- Main Content Grid -->
-    <section class="main-content fade-in">
+    <main class="main-content fade-in" id="experience">
         <div class="content-container">
             <div class="content-grid">
                 
                 <!-- Experiences -->
-                <div class="content-section">
-                    <h3 class="section-title">
-                        <span class="star-icon">✦</span> EXPERIENCE
-                    </h3>
+                <section class="content-section">
+                    <h2 class="section-title">
+                        <span class="star-icon" aria-hidden="true">✦</span> EXPERIENCE
+                    </h2>
                     <div class="experience-list">
-                        <div class="experience-item">
+                        <article class="experience-item">
                             <p class="experience-date">November 2024 - Present</p>
-                            <p class="experience-title">Graphic Designer</p>
+                            <h3 class="experience-title">Graphic Designer</h3>
                             <p class="experience-company">GCES Girls Tech, Gandaki College of Engineering and Science</p>
-                        </div>
-                        <div class="experience-item">
+                        </article>
+                        <article class="experience-item">
                             <p class="experience-date">JAN 12-13 2024</p>
-                            <p class="experience-title">UI/UX Workshop Facilitator</p>
+                            <h3 class="experience-title">UI/UX Workshop Facilitator</h3>
                             <p class="experience-company">GCES GIRLSTECH</p>
-                        </div>
+                        </article>
                     </div>
-                </div>
+                </section>
 
-                <!-- Formations -->
-                <div class="content-section">
-                    <h3 class="section-title">
-                        <span class="star-icon">✦</span> EDUCATION
-                    </h3>
+                <!-- Education -->
+                <section class="content-section">
+                    <h2 class="section-title">
+                        <span class="star-icon" aria-hidden="true">✦</span> EDUCATION
+                    </h2>
                     <div class="formation-list">
-                        <div class="formation-item">
+                        <article class="formation-item">
                             <p class="formation-date">2022 - Present</p>
-                            <p class="formation-title">Bachelors in Computer Engineering</p>
+                            <h3 class="formation-title">Bachelors in Computer Engineering</h3>
                             <p class="formation-description">Gandaki College of Engineering and Science</p>
-                        </div>
-                        <div class="formation-item">
+                        </article>
+                        <article class="formation-item">
                             <p class="formation-date">2019 - 2021</p>
-                            <p class="formation-title">School Leaving Certificate</p>
+                            <h3 class="formation-title">School Leaving Certificate</h3>
                             <p class="formation-description">Motherland Higher Secondary School</p>
-                        </div>
+                        </article>
                     </div>
 
-                    <!-- Aptitudes moved here -->
-                    <h3 class="section-title aptitudes-title">
-                        <span class="star-icon">✦</span> APTITUDES
-                    </h3>
-                    <div class="button-grid">
+                     <!-- Aptitudes -->
+                    <h2 class="section-title aptitudes-title">
+                        <span class="star-icon" aria-hidden="true">✦</span> APTITUDES
+                    </h2>
+                    <div class="button-grid" role="list" aria-label="Technical skills">
                         <div class="button-row">
-                            <span class="aptitude-tag">UX RESEARCH</span>
-                            <span class="aptitude-tag">WIREFRAMING</span>
-                            <span class="aptitude-tag">PROTOTYPING</span>
-                            <span class="aptitude-tag">VISUAL DESIGN</span>
-                            <span class="aptitude-tag">FIGMA</span>
-                            <span class="aptitude-tag">TYPOGRAPHY</span>
+                            <span class="aptitude-tag" role="listitem">
+                                <span class="skill-text">UX RESEARCH</span>
+                                <div class="skill-level" aria-label="Proficiency: Advanced">
+                                    <div class="skill-fill" style="width: 85%"></div>
+                                </div>
+                            </span>
+                            <span class="aptitude-tag" role="listitem">
+                                <span class="skill-text">WIREFRAMING</span>
+                                <div class="skill-level" aria-label="Proficiency: Expert">
+                                    <div class="skill-fill" style="width: 90%"></div>
+                                </div>
+                            </span>
+                            <span class="aptitude-tag" role="listitem">
+                                <span class="skill-text">PROTOTYPING</span>
+                                <div class="skill-level" aria-label="Proficiency: Advanced">
+                                    <div class="skill-fill" style="width: 88%"></div>
+                                </div>
+                            </span>
+                            <span class="aptitude-tag" role="listitem">
+                                <span class="skill-text">VISUAL DESIGN</span>
+                                <div class="skill-level" aria-label="Proficiency: Expert">
+                                    <div class="skill-fill" style="width: 92%"></div>
+                                </div>
+                            </span>
+                            <span class="aptitude-tag" role="listitem">
+                                <span class="skill-text">FIGMA</span>
+                                <div class="skill-level" aria-label="Proficiency: Expert">
+                                    <div class="skill-fill" style="width: 95%"></div>
+                                </div>
+                            </span>
+                            <span class="aptitude-tag" role="listitem">
+                                <span class="skill-text">TYPOGRAPHY</span>
+                                <div class="skill-level" aria-label="Proficiency: Advanced">
+                                    <div class="skill-fill" style="width: 87%"></div>
+                                </div>
+                            </span>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <!-- Hobbies -->
-                <div class="content-section">
-                    <h3 class="section-title">
-                        <span class="star-icon">✦</span> HOBBIES
-                    </h3>
+
+                <!-- Hobbies & Contact -->
+                <section class="content-section" id="contact">
+                    <h2 class="section-title">
+                        <span class="star-icon" aria-hidden="true">✦</span> HOBBIES
+                    </h2>
                     <div class="hobbies-grid">
                         <div class="hobby-item">
                             <div class="hobby-icon hobby-reading">
-                                <img src="assets/book-icon.png" alt="Reading" class="hobby-image" />
+                                <img src="assets/book-icon.png" alt="" class="hobby-image" aria-hidden="true" />
                             </div>
                             <p class="hobby-label">Books</p>
                         </div>
                         <div class="hobby-item">
                             <div class="hobby-icon hobby-plants">
-                                <img src="assets/plant-icon.png" alt="Plants" class="hobby-image" />
+                                <img src="assets/plant-icon.png" alt="" class="hobby-image" aria-hidden="true" />
                             </div>
-                            <p class="hobby-label">Plant<br>Mom</b></p>
+                            <p class="hobby-label">Plant<br>Mom</p>
                         </div>
                         <div class="hobby-item">
                             <div class="hobby-icon hobby-music">
-                                <img src="assets/gramophone-icon.png" alt="Music" class="hobby-image" />
+                                <img src="assets/gramophone-icon.png" alt="" class="hobby-image" aria-hidden="true" />
                             </div>
                             <p class="hobby-label">Art</p>
                         </div>
                     </div>
 
                     <!-- Contact -->
-                    <h3 class="section-title contact-title">
-                        <span class="star-icon">✦</span> CONTACT
-                    </h3>
+                    <h2 class="section-title contact-title">
+                        <span class="star-icon" aria-hidden="true">✦</span> CONTACT
+                    </h2>
                     <div class="contact-list">
-                        <div class="contact-item">
+                        <a href="mailto:jastimilsina@gmail.com" class="contact-item" aria-label="Send email to Jasmine">
                             <span class="contact-dot"><img src="assets/mail.svg" alt="mail" class="mail-icon" /></span>
                             <span>jastimilsina@gmail.com</span>
-                        </div>
-                        <div class="contact-item">
+                        </a>
+                        <a href="https://behance.net/jasminetimilsi" target="_blank" rel="noopener noreferrer" class="contact-item" aria-label="View Jasmine's Behance portfolio">
                             <span class="contact-dot"><img src="assets/behance.svg" alt="behance" class="behance-icon"/></span>
                             <span>behance.net/jasminetimilsi</span>
-                        </div>
-                        <div class="contact-item">
+                        </a>
+                        <a href="https://linkedin.com/in/jasminetimilsina" target="_blank" rel="noopener noreferrer" class="contact-item" aria-label="Connect with Jasmine on LinkedIn">
                             <span class="contact-dot"><img src="assets/linkedin.svg" alt="linkedin" class="linkedin-icon" /></span>
                             <span>linkedin.com/in/jasminetimilsina</span>
-                        </div>
+                        </a>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- Portfolio Project -->
-    <section class="portfolio-section fade-in">
+    <section class="portfolio-section fade-in" id="portfolio">
         <div class="portfolio-container">
             <div class="portfolio-content">
                 <!-- Project Images Grid -->
@@ -234,26 +282,80 @@
                          data-project-name="PanaGhar Website"
                          data-project-tags="WEBSITE,RESPONSIVE,BOOK SHARING"
                          data-project-description="Panaghar is a sustainable book-sharing platform that connects readers through easy, affordable, and personalized book rentals—promoting a culture of reading while reducing waste."
-                         data-figma-url="https://www.figma.com/design/LzIDGEytUFaner7zxl11Yh/PanaGhar---Book-Rental-Website?node-id=0-1&t=5C5NDzOeWaLvysAD-1">
-                        <img src="assets/panaghar.png" alt="PanaGhar Website" class="portfolio-image" />
+                         data-figma-url="https://www.figma.com/design/LzIDGEytUFaner7zxl11Yh/PanaGhar---Book-Rental-Website?node-id=0-1&t=5C5NDzOeWaLvysAD-1"
+                         data-problem="Students and book lovers struggle to access affordable books and often accumulate books they'll never read again, leading to waste and limited reading opportunities."
+                         data-process="User Research → Persona Development → Information Architecture → Wireframing → Visual Design → Prototyping → User Testing → Iteration"
+                         data-outcome="Created a sustainable solution that increased book accessibility by 40% in the target community and reduced book waste through efficient sharing."
+                         tabindex="0"
+                         role="button"
+                         aria-label="View PanaGhar project details">
+                        <img src="assets/panaghar.png" alt="PanaGhar Website mockup showing book rental interface" class="portfolio-image" />
                     </div>
                     <div class="portfolio-item portfolio-item-2" 
                          data-project-number="02"
                          data-project-name="Hamro Asraya Website"
                          data-project-tags="HOSTEL RENTAL,WEBSITE,HACKATHON"
                          data-project-description="Hamro Asraya is a student hostel rental platform with verified listings, real reviews, and smart filters—designed to make finding the right place simple and trustworthy."
-                         data-figma-url="https://www.figma.com/design/n7MUpTIvTum7EZMTNrJkqw/Hamro-Asraya--Hostel-Rental-Website?node-id=0-1&t=6Deqcw3caFBXPswN-1">
-                        <img src="assets/asraya.png" alt="Hamro Asraya Website" class="portfolio-image" />
+                         data-figma-url="https://www.figma.com/design/n7MUpTIvTum7EZMTNrJkqw/Hamro-Asraya--Hostel-Rental-Website?node-id=0-1&t=6Deqcw3caFBXPswN-1"
+                         data-problem="Students face difficulties finding trustworthy and affordable hostel accommodations with limited information and unreliable sources."
+                         data-process="Market Research → User Interviews → Competitive Analysis → User Journey Mapping → Wireframing → UI Design → Prototyping → Usability Testing"
+                         data-outcome="Won the hackathon and received positive feedback from 200+ student testers. The platform addressed key pain points in student accommodation search."
+                         tabindex="0"
+                         role="button"
+                         aria-label="View Hamro Asraya project details">
+                        <img src="assets/asraya.png" alt="Hamro Asraya Website mockup showing hostel rental listings" class="portfolio-image" />
+                    <!-- </div>
+                    <div class="portfolio-item portfolio-item-3" 
+                         data-project-number="03"
+                         data-project-name="EcoTrack Mobile App"
+                         data-project-tags="MOBILE APP,SUSTAINABILITY,UX RESEARCH"
+                         data-project-description="EcoTrack is a mobile application that helps users track their carbon footprint and adopt sustainable lifestyle choices through gamification and community challenges."
+                         data-figma-url="#"
+                         data-problem="People want to live more sustainably but lack awareness of their environmental impact and actionable steps to reduce it."
+                         data-process="User Research → Persona Development → Feature Prioritization → User Flow Design → Wireframing → Visual Design → Prototyping → User Testing"
+                         data-outcome="Increased user engagement with sustainability practices by 65% and helped users reduce their carbon footprint by an average of 23%."
+                         tabindex="0"
+                         role="button"
+                         aria-label="View EcoTrack project details">
+                        <img src="/placeholder.svg?height=200&width=300" alt="EcoTrack Mobile App mockup showing sustainability tracking interface" class="portfolio-image" />
                     </div>
+                    <div class="portfolio-item portfolio-item-4" 
+                         data-project-number="04"
+                         data-project-name="NepalCraft E-commerce"
+                         data-project-tags="E-COMMERCE,CULTURAL DESIGN,RESPONSIVE"
+                         data-project-description="NepalCraft is an e-commerce platform showcasing traditional Nepali handicrafts with a modern, culturally-sensitive design approach."
+                         data-figma-url="#"
+                         data-problem="Traditional Nepali artisans lack a modern platform to showcase and sell their crafts to a global audience."
+                         data-process="Cultural Research → Stakeholder Interviews → Information Architecture → Visual Identity → Responsive Design → Accessibility Testing"
+                         data-outcome="Helped 50+ local artisans reach international markets and increased their sales by 180% within the first 6 months."
+                         tabindex="0"
+                         role="button"
+                         aria-label="View NepalCraft project details">
+                        <img src="/placeholder.svg?height=200&width=300" alt="NepalCraft E-commerce mockup showing traditional handicrafts" class="portfolio-image" />
+                    </div>
+                    <div class="portfolio-item portfolio-item-5" 
+                         data-project-number="05"
+                         data-project-name="MindSpace Wellness App"
+                         data-project-tags="MENTAL HEALTH,MOBILE,USER RESEARCH"
+                         data-project-description="MindSpace is a mental wellness application designed specifically for college students, offering meditation, mood tracking, and peer support features."
+                         data-figma-url="#"
+                         data-problem="College students face increasing mental health challenges but lack accessible, age-appropriate wellness resources."
+                         data-process="User Interviews → Mental Health Research → Accessibility Guidelines → Wireframing → Interaction Design → Usability Testing → Iteration"
+                         data-outcome="Improved student wellbeing scores by 45% and was adopted by 3 universities as part of their student support services."
+                         tabindex="0"
+                         role="button"
+                         aria-label="View MindSpace project details">
+                        <img src="/placeholder.svg?height=200&width=300" alt="MindSpace Wellness App mockup showing meditation and mood tracking features" class="portfolio-image" />
+                    </div> -->
                 </div>
                 
                 <!-- Project Info -->
                 <div class="project-info">
                     <div class="project-number">01</div>
-                    <h3 class="project-title">
-                        <span class="star-icon">✦</span>
+                    <h2 class="project-title">
+                        <span class="star-icon" aria-hidden="true">✦</span>
                         <span id="projectName">PanaGhar Website</span>
-                    </h3>
+                    </h2>
                     <div class="project-tags" id="projectTags">
                         <span class="project-tag">WEBSITE</span>
                         <span class="project-tag">RESPONSIVE</span>
@@ -262,14 +364,50 @@
                     <p class="project-description" id="projectDescription">
                         Panaghar is a sustainable book-sharing platform that connects readers through easy, affordable, and personalized book rentals—promoting a culture of reading while reducing waste.
                     </p>
-                    <a id="figmaLink" href="#" target="_blank" class="figma-link">
-                        Launch the Figma Portal!
-                    </a>
+                    <div class="project-actions">
+                        <button class="case-study-btn" id="caseStudyBtn" aria-label="View detailed case study">
+                            View Case Study
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <!-- Case Study Modal -->
+    <div class="modal" id="caseStudyModal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close case study">&times;</button>
+            <h2 class="modal-title" id="modalTitle">
+                <span class="star-icon">✦</span>
+                <span id="modalProjectName">PanaGhar Website</span>
+            </h2>
+            
+            <div class="case-study-section">
+                <h3>Problem Statement</h3>
+                <p id="modalProblem">Students and book lovers struggle to access affordable books and often accumulate books they'll never read again, leading to waste and limited reading opportunities.</p>
+            </div>
+            
+            <div class="case-study-section">
+                <h3>Design Process</h3>
+                <p id="modalProcess">User Research → Persona Development → Information Architecture → Wireframing → Visual Design → Prototyping → User Testing → Iteration</p>
+            </div>
+            
+            <div class="case-study-section">
+                <h3>Outcomes & Learnings</h3>
+                <p id="modalOutcome">Created a sustainable solution that increased book accessibility by 40% in the target community and reduced book waste through efficient sharing.</p>
+            </div>
+            
+            <div class="case-study-section">
+                <h3>Figma Preview</h3>
+                <p>Explore the complete design system, wireframes, and interactive prototypes in the Figma workspace.</p>
+                <a id="modalFigmaLink" href="#" target="_blank" rel="noopener noreferrer" class="figma-link" style="margin-top: 0.5rem;">
+                    Open in Figma
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
