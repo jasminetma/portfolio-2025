@@ -113,9 +113,11 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateProjectInfo(item) {
     const number = item.getAttribute("data-project-number")
     const name = item.getAttribute("data-project-name")
-    const tags = item.getAttribute("data-project-tags").split(",")
+    const tags = item.getAttribute("data-project-tags")
     const description = item.getAttribute("data-project-description")
     const figmaUrl = item.getAttribute("data-figma-url")
+
+    console.log("Updating project info:", { number, name, tags, description, figmaUrl }) // Debug log
 
     currentProject = {
       name,
@@ -125,28 +127,47 @@ document.addEventListener("DOMContentLoaded", () => {
       figmaUrl,
     }
 
-    projectNumber.textContent = number
-    projectName.textContent = name
-    figmaLink.href = figmaUrl || "#"
+    // Update project number
+    if (projectNumber) {
+      projectNumber.textContent = number
+    }
 
-    projectTags.innerHTML = ""
-    tags.forEach((tag) => {
-      const tagElement = document.createElement("span")
-      tagElement.className = "project-tag"
-      tagElement.textContent = tag.trim()
-      projectTags.appendChild(tagElement)
-    })
+    // Update project name
+    if (projectName) {
+      projectName.textContent = name
+    }
 
-    projectDescription.style.opacity = "0"
-    setTimeout(() => {
-      projectDescription.textContent = description
-      projectDescription.style.opacity = "1"
-    }, 150)
+    // Update Figma link
+    if (figmaLink) {
+      figmaLink.href = figmaUrl || "#"
+    }
+
+    // Update project tags
+    if (projectTags && tags) {
+      projectTags.innerHTML = ""
+      const tagArray = tags.split(",")
+      tagArray.forEach((tag) => {
+        const tagElement = document.createElement("span")
+        tagElement.className = "project-tag"
+        tagElement.textContent = tag.trim()
+        projectTags.appendChild(tagElement)
+      })
+    }
+
+    // Update project description with smooth transition
+    if (projectDescription && description) {
+      projectDescription.style.opacity = "0"
+      setTimeout(() => {
+        projectDescription.textContent = description
+        projectDescription.style.opacity = "1"
+      }, 150)
+    }
   }
 
   // Portfolio item interactions
   portfolioItems.forEach((item) => {
     item.addEventListener("click", function () {
+      console.log("Portfolio item clicked:", this) // Debug log
       portfolioItems.forEach((i) => i.classList.remove("active"))
       this.classList.add("active")
       updateProjectInfo(this)
@@ -229,14 +250,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
-      e.preventDefault()
-      const target = document.querySelector(this.getAttribute("href"))
-      if (target) {
-        const offsetTop = target.offsetTop - 80 // Account for sticky nav
-        window.scrollTo({
-          top: offsetTop,
-          behavior: "smooth",
-        })
+      const href = this.getAttribute("href")
+      if (href && href.startsWith("#")) {
+        e.preventDefault()
+        const target = document.querySelector(href)
+        if (target) {
+          const offsetTop = target.offsetTop - 80 // Account for sticky nav
+          window.scrollTo({
+            top: offsetTop,
+            behavior: "smooth",
+          })
+        }
       }
     })
   })
