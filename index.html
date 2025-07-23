@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jasmine Timilsina - Portfolio</title>
     <meta name="description" content="Portfolio of Jasmine Timilsina, a creative UX/UI designer specializing in user research, wireframing, and visual design.">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' fill='%23eebbc4'%3E✦%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' fill='%23eebbc4'%3E✦%3C/text%3E%3C/svg%3E">
 
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
             <a href="#about" class="nav-link" data-section="about">About</a>
             <a href="#experience" class="nav-link" data-section="experience">Experience/Contact</a>
             <a href="#portfolio" class="nav-link" data-section="portfolio">Projects</a>
-            <a href="assets/Jasmine_Timilsina_Resume.pdf"  class="resume-btn" id="resumeBtn" aria-label="Download Resume"download>Resume</a>
+            <a href="assets/Jasmine_Timilsina_Resume.pdf" class="resume-btn" id="resumeBtn" aria-label="Download Resume" download>Resume</a>
         </div>
     </nav>
 
@@ -35,7 +35,7 @@
                 <p>JASMINE <span style="font-weight: 600;">2025</span></p>
             </div>
             <div class="header-right">
-                <p><span style="font-weight: 600;">UI UX</span></p>
+                <p><span style="font-weight: 600;">UI/UX</span></p>
                 <p>DESIGN</p>
             </div>
         </div>
@@ -183,44 +183,25 @@
                         <div class="button-row">
                             <span class="aptitude-tag" role="listitem">
                                 <span class="skill-text">UX RESEARCH</span>
-                                <div class="skill-level" aria-label="Proficiency: Advanced">
-                                    <div class="skill-fill" style="width: 85%"></div>
-                                </div>
                             </span>
                             <span class="aptitude-tag" role="listitem">
-                                <span class="skill-text">WIREFRAMING</span>
-                                <div class="skill-level" aria-label="Proficiency: Expert">
-                                    <div class="skill-fill" style="width: 90%"></div>
-                                </div>
+                                <span class="skill-text">ILLUSTRATION</span>
                             </span>
                             <span class="aptitude-tag" role="listitem">
                                 <span class="skill-text">PROTOTYPING</span>
-                                <div class="skill-level" aria-label="Proficiency: Advanced">
-                                    <div class="skill-fill" style="width: 88%"></div>
-                                </div>
                             </span>
                             <span class="aptitude-tag" role="listitem">
                                 <span class="skill-text">VISUAL DESIGN</span>
-                                <div class="skill-level" aria-label="Proficiency: Expert">
-                                    <div class="skill-fill" style="width: 92%"></div>
-                                </div>
                             </span>
                             <span class="aptitude-tag" role="listitem">
                                 <span class="skill-text">FIGMA</span>
-                                <div class="skill-level" aria-label="Proficiency: Expert">
-                                    <div class="skill-fill" style="width: 95%"></div>
-                                </div>
                             </span>
                             <span class="aptitude-tag" role="listitem">
-                                <span class="skill-text">TYPOGRAPHY</span>
-                                <div class="skill-level" aria-label="Proficiency: Advanced">
-                                    <div class="skill-fill" style="width: 87%"></div>
-                                </div>
+                                <span class="skill-text">POST DESIGN</span>
                             </span>
                         </div>
                     </div>
                 </section>
-
 
                 <!-- Hobbies & Contact -->
                 <section class="content-section" id="contact">
@@ -275,64 +256,26 @@
     <section class="portfolio-section fade-in" id="portfolio">
         <div class="portfolio-container">
             <div class="portfolio-content">
-                <!-- Project Images Grid -->
-                <div class="portfolio-grid">
-                    <div class="portfolio-item portfolio-item-1" 
-                         data-project-number="01" 
-                         data-project-name="PanaGhar Website"
-                         data-project-tags="WEBSITE,RESPONSIVE,BOOK SHARING"
-                         data-project-description="Panaghar is a sustainable book-sharing platform that connects readers through easy, affordable, and personalized book rentals—promoting a culture of reading while reducing waste."
-                         data-figma-url="https://www.figma.com/design/LzIDGEytUFaner7zxl11Yh/PanaGhar---Book-Rental-Website?node-id=0-1&t=5C5NDzOeWaLvysAD-1"
-                         data-problem="Books are expensive, and many students own books that end up unused on shelves after one read. Libraries often lack the titles students actually want — either due to limited resources or outdated collections. Through informal surveys and conversations with students at our college, we found a strong desire for a more flexible, interest-driven way to access and share books affordably."
-                         data-process="Casual Interviews → User Research → Problem Validation → Persona Development → Information Architecture → Wireframing → Visual Design → Prototyping → User Testing → Iteration"
-                         data-outcome="Panaghar created a simple and sustainable system where users could both rent and lend books. This helped reduce costs, prevent waste, and encouraged reading within our community. After launch, book accessibility improved significantly, and feedback highlighted the value of peer-to-peer sharing over traditional library models."
-                         tabindex="0"
-                         role="button"
-                         aria-label="View PanaGhar project details">
-                        <img src="assets/panaghar.png" alt="PanaGhar Website mockup showing book rental interface" class="portfolio-image" />
+                <!-- Portfolio Grid Container -->
+                <div class="portfolio-grid-container">
+
+                    
+                    <!-- Project Images Grid -->
+                    <div class="portfolio-grid" id="portfolioGrid">
+                        <!-- Projects will be dynamically loaded from JavaScript -->
                     </div>
-                    <div class="portfolio-item portfolio-item-2" 
-                         data-project-number="02"
-                         data-project-name="Hamro Asraya Website"
-                         data-project-tags="HOSTEL RENTAL,WEBSITE,HACKATHON"
-                         data-project-description="Hamro Asraya is a student hostel rental platform with verified listings, real reviews, and smart filters—designed to make finding the right place simple and trustworthy."
-                         data-figma-url="https://www.figma.com/design/n7MUpTIvTum7EZMTNrJkqw/Hamro-Asraya--Hostel-Rental-Website?node-id=0-1&t=6Deqcw3caFBXPswN-1"
-                         data-problem="In Nepal, students often struggle to find reliable, affordable hostels. What’s advertised online or shared by word-of-mouth rarely matches the reality — hostels look promising from the outside but fall short once you move in. Many listings are outdated, unverified, and shared through unreliable sources. This lack of transparency and trust led us to create Hamro Asraya, a dedicated student hostel rental platform with real reviews, verified hostelers, and optional in-person inspections by our agents."
-                         data-process="Online Research → Peer Interviews → Problem Definition → Competitive Analysis → Persona Building → User Journey Mapping → Wireframing → Visual Design → Prototyping → Testing → Refinement"
-                         data-outcome="Hamro Asraya offered students a safer, smarter way to find hostels. Verified listings and real student reviews built trust, while the optional inspection service added an extra layer of confidence. Feedback from over 200 students showed a strong demand for this type of platform, and our solution addressed key pain points in the hostel-hunting process — winning us a hackathon and validating the core idea."
-                         tabindex="0"
-                         role="button"
-                         aria-label="View Hamro Asraya project details">
-                        <img src="assets/asraya.png" alt="Hamro Asraya Website mockup showing hostel rental listings" class="portfolio-image" />
-                    </div>
-                    <div class="portfolio-item portfolio-item-3" 
-                         data-project-number="03"
-                         data-project-name="Eco Drive Mobile"
-                         data-project-tags="MOBILE APP,SUSTAINABILITY,UX RESEARCH"
-                         data-project-description="With rising fuel prices and growing environmental concerns, many people want to switch to eco-friendly transportation — but renting electric vehicles (EVs) is often confusing, expensive, or inaccessible. For my first mobile UX project, I was tasked with designing EcoDrive: a user-friendly app that makes it easy for users to find, rent, and ride sustainable vehicles like e-scooters, bikes, or EVs near them."
-                         data-figma-url="https://www.figma.com/design/OSQm17HXZQBNGgitIJK9xU/Eco-Rental---Car-Rental?node-id=0-1&t=X56O9KBietMIlYUX-1"
-                         data-problem="People want to live more sustainably but lack awareness of their environmental impact and actionable steps to reduce it."
-                         data-process="Exploratory Research → Competitor Analysis → UX Goals Definition → Wireframing → Mobile-First UI Design → Prototyping → Peer Feedback & Iteration"
-                         data-outcome="This project taught me the foundations of mobile UX — from understanding user journeys to designing intuitive tap areas and clean layouts. EcoDrive featured real-time vehicle availability, eco-impact tracking, and quick booking. Through peer feedback and testing with 8 mock users, I refined the design for clarity and simplicity. The final prototype helped me understand how to balance usability with sustainability goals in mobile product design."
-                         tabindex="0"
-                         role="button"
-                         aria-label="View EcoTrack project details">
-                        <img src="/assets/ecodrive.png" alt="EcoTrack Mobile App mockup showing sustainability tracking interface" class="portfolio-image" />
-                    </div>
-                    <!-- </div><div class="portfolio-item portfolio-item-5" 
-                         data-project-number="05"
-                         data-project-name="Logo Designs"
-                         data-project-tags="MENTAL HEALTH,MOBILE,USER RESEARCH"
-                         data-project-description="MindSpace is a mental wellness application designed specifically for college students, offering meditation, mood tracking, and peer support features."
-                         data-figma-url="#"
-                         data-problem="College students face increasing mental health challenges but lack accessible, age-appropriate wellness resources."
-                         data-process="User Interviews → Mental Health Research → Accessibility Guidelines → Wireframing → Interaction Design → Usability Testing → Iteration"
-                         data-outcome="Improved student wellbeing scores by 45% and was adopted by 3 universities as part of their student support services."
-                         tabindex="0"
-                         role="button"
-                         aria-label="View MindSpace project details">
-                        <img src="/placeholder.svg?height=200&width=300" alt="MindSpace Wellness App mockup showing meditation and mood tracking features" class="portfolio-image" />
-                    </div> --> 
+                    <!-- Grid Navigation -->
+                    <!-- <div class="grid-navigation">
+                        <button class="grid-nav-btn prev-grid-btn" id="prevGridBtn" aria-label="Previous projects">
+                            <span>←</span>
+                        </button>
+                        <div class="page-indicator">
+                            <span id="currentPage">1</span> / <span id="totalPages">1</span>
+                        </div>
+                        <button class="grid-nav-btn next-grid-btn" id="nextGridBtn" aria-label="Next projects">
+                            <span>→</span>
+                        </button>
+                    </div> -->
                 </div>
                 
                 <!-- Project Info -->
@@ -340,20 +283,16 @@
                     <div class="project-number">01</div>
                     <h2 class="project-title">
                             <span style="color: #eb8dbe; font-size: 1.5em; margin-bottom: 12px;" aria-hidden="true">★</span>
-                        <span id="projectName">PanaGhar Website</span>
+                        <span id="projectName">Select a project</span>
                     </h2>
                     <div class="project-tags" id="projectTags">
-                        <span class="project-tag">WEBSITE</span>
-                        <span class="project-tag">RESPONSIVE</span>
-                        <span class="project-tag">BOOK SHARING</span>
+                        <!-- Tags will be dynamically loaded -->
                     </div>
                     <p class="project-description" id="projectDescription">
-                        Panaghar is a sustainable book-sharing platform that connects readers through easy, affordable, and personalized book rentals—promoting a culture of reading while reducing waste.
+                        Click on a project to see details
                     </p>
-                    <div class="project-actions">
-                        <button class="case-study-btn" id="caseStudyBtn" aria-label="View detailed case study">
-                            View Case Study
-                        </button>
+                    <div class="project-actions" id="projectActions">
+                        <!-- Action buttons will be dynamically loaded -->
                     </div>
                 </div>
             </div>
@@ -366,41 +305,21 @@
             <button class="modal-close" id="modalClose" aria-label="Close case study">&times;</button>
             <h2 class="modal-title" id="modalTitle">
                 <span class="star-icon">✦</span>
-                <span id="modalProjectName">PanaGhar Website</span>
+                <span id="modalProjectName">Project Details</span>
             </h2>
             
-            <div class="case-study-section">
-                <h3>Problem Statement</h3>
-                <p id="modalProblem">Students and book lovers struggle to access affordable books and often accumulate books they'll never read again, leading to waste and limited reading opportunities.</p>
-            </div>
-            
-            <div class="case-study-section">
-                <h3>Design Process</h3>
-                <p id="modalProcess">User Research → Persona Development → Information Architecture → Wireframing → Visual Design → Prototyping → User Testing → Iteration</p>
-            </div>
-            
-            <div class="case-study-section">
-                <h3>Outcomes & Learnings</h3>
-                <p id="modalOutcome">Created a sustainable solution that increased book accessibility by 40% in the target community and reduced book waste through efficient sharing.</p>
-            </div>
-            
-            <div class="case-study-section">
-                <h3>Figma Preview</h3>
-                <p>Explore the complete design system, wireframes, and interactive prototypes in the Figma workspace.</p>
-                <a id="modalFigmaLink" href="#" target="_blank" rel="noopener noreferrer" class="figma-link" style="margin-top: 0.5rem;">
-                    Open in Figma
-                </a>
+            <div class="modal-sections" id="modalSections">
+                <!-- Modal content will be dynamically loaded -->
             </div>
         </div>
-    </div> 
+    </div>
     <!-- Footer -->
-<footer class="footer fade-in">
-  <div class="footer-content">
-    <p class="footer-text">© 2025 Jasmine Timilsina. All rights reserved.</p>
-    <p class="footer-text">Crafted with care and a sprinkle of creativity ✦</p>
-  </div>
-</footer>
-
-    <script src="script.js" defer></script>
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">
+                © 2025 Jasmine Timilsina. All rights reserved.
+            </p>
+        </div>
+    <script src="script.js"></script>
 </body>
 </html>
