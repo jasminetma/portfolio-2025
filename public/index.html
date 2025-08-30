@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasmine - UI/UX Designer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='1em' font-size='90' fill='%23eebbc4'%3E✦%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span style="color: #b597d3; font-size: 30px;">✦</span>
+                <span class="logo-text">Jasmine</span>
+            </div>
+            
+            <!-- Hamburger Menu Button -->
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home"><span class="nav-item"><span class="arrow-svg" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 4l8 8-8 8M4 12h16" stroke="#2c2324" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>Home</span></a></li>
+                    <li><a href="#about"><span class="nav-item"><span class="arrow-svg" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 4l8 8-8 8M4 12h16" stroke="#2c2324" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>About</span></a></li>
+                    <li><a href="#projects"><span class="nav-item"><span class="arrow-svg" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 4l8 8-8 8M4 12h16" stroke="#2c2324" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>Projects</span></a></li>
+                    <li><a href="#contact"><span class="nav-item"><span class="arrow-svg" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 4l8 8-8 8M4 12h16" stroke="#2c2324" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>Contact</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero fade-in-section" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <p class="hero-intro">Hi! My name is Jasmine,</p>
+                    <h1 class="hero-title">
+                        AN ASPIRING  <br>
+                        <span class="title-growth">UI/UX DESIGNER.</span>
+                    </h1>
+                    <p class="hero-description">
+                        Crafting intuitive, joyful experiences—wherever there's Wi-Fi and good coffee. Obsessed with details, occasionally dabble in graphic design, and always designing (even at 2 a.m. when inspiration hits).</p>
+                    <button class="cta-button">
+                        <a href="assets/Resume.pdf" class="resume-btn" id="resumeBtn" aria-label="Download Resume" download>Hire Me</a>
+                    </button>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-image-container">
+                        <!-- Main profile image -->
+                        <div class="profile-image-wrapper">
+                            <img src="/assets/jas.png" alt="Jasmine" class="profile-image">
+                        </div>
+                        
+                        <!-- Floating elements -->
+                        <div class="floating-element figma-bubble">
+                            <div class="chart-icon">
+                                <img src="/assets/figma.png" alt="Figma" class="chart-icon-image" width="195" height="140">
+                            </div>
+                        </div>
+                        
+                        <div class="floating-element eye-bubble">
+                            <div class="eye-icon">
+                                <img src="/assets/eye.png" alt="Eye Icon" class="eye-icon-image" width="145" height="100">
+                            </div>
+                        </div>
+                        
+                        <!-- Name tag -->
+                        <div class="floating-element name-tag">
+                            <div class="name-tag">
+                                <img src="/assets/name.png" alt="Name Tag" class="name-tag-icon" width="150" height="105">
+                            </div>
+                        </div>
+                        
+                        <!-- Availability badge -->
+                        <div class="availability-badge">
+                            <div class="work-tag">
+                                <img src="/assets/work.png" alt="Available for Work" class="work-tag-icon" width="220" height="160">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <section class="skills fade-in-section" role="banner">
+        <div class="skills-container">
+            <div class="skills-lines-wrapper">
+                <div class="skills-tabs-moving">
+                    <div class="skills-tabs-track" aria-label="Skills showcase">
+                        <span class="skills-tab">UI DESIGN</span>
+                        <div class="skills-dot" style="font-size: 5rem; line-height: 2;">·</div>
+                        <span class="skills-tab">UX RESEARCH</span>
+                        <div class="skills-dot" style="font-size: 5rem; line-height: 2;">·</div>
+                        <span class="skills-tab">POSTER DESIGN</span>
+                        <div class="skills-dot" style="font-size: 5rem; line-height: 2;">·</div>
+                        <span class="skills-tab">PROTOTYPING</span>
+                        <div class="skills-dot" style="font-size: 5rem; line-height: 2;">·</div>
+                        <span class="skills-tab">WIREFRAMING</span>
+                        <div class="skills-dot" style="font-size: 5rem; line-height: 2;">·</div>
+                        <span class="skills-tab">FIG JAM</span>
+                        <div class="skills-dot" style="font-size: 5rem; line-height: 2;">·</div>
+                        <span class="skills-tab">ILLUSTRATION</span>
+                        <div class="skills-dot" style="font-size: 5rem; line-height: 2;">·</div>
+                        <span class="skills-tab">LOGO DESIGN</span>
+                        <div class="skills-dot" style="font-size: 5rem; line-height: 2;">·</div>
+                        <!-- Duplicate for seamless loop -->
+                        <span class="skills-tab">UI DESIGN</span>
+                        <div class="skills-dot" style="font-size: 5rem; line-height: 2;">·</div>
+                        <span class="skills-tab">UX RESEARCH</span>
+                        <div class="skills-dot" style="font-size: 5rem; line-height: 2;">·</div>
+                        <span class="skills-tab">POSTER DESIGN</span>
+                        <div class="skills-dot" style="font-size: 5rem; line-height: 2;">·</div>
+                        <span class="skills-tab">PROTOTYPING</span>
+                        <div class="skills-dot" style="font-size: 5rem; line-height: 2;">·</div>
+                        <span class="skills-tab">WIREFRAMING</span>
+                        <div class="skills-dot" style="font-size: 5rem; line-height: 2;">·</div>
+                        <span class="skills-tab">FIG JAM</span>
+                        <div class="skills-dot" style="font-size: 5rem; line-height: 2;">·</div>
+                        <span class="skills-tab">ILLUSTRATION</span>
+                        <div class="skills-dot" style="font-size: 5rem; line-height: 2;">·</div>
+                        <span class="skills-tab">LOGO DESIGN</span>
+                        <div class="skills-dot" style="font-size: 5rem; line-height: 2;">·</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="featured-projects fade-in-section" id="projects">
+        <div class="project-container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card project-1">
+                    <div class="project-content">
+                        <div class="project-badge">
+                            <button class="project-type webui">Web UI</button>
+                            <button class="project-type team">Team Project</button>
+                        </div> 
+                        <h3 class="project-title">PanaGhar - Book Rental Website</h3>
+                        <p class="project-description">
+                            Panaghar is a sustainable book-sharing platform that connects readers through easy, affordable, and personalized book rentals—promoting a culture of reading while reducing waste.
+                        </p>
+                        <a href="#" class="project-link" data-project="panaghar">See full case study →</a>
+                    </div>
+                    <div class="project-image">
+                        <img src="/assets/panaghar.png" alt="PanaGhar Project">
+                    </div>
+                </div>
+                
+                <div class="project-card project-2">
+                    <div class="project-image">
+                        <img src="/assets/asraya.png" alt="Hamro Asraya Project">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-badge">
+                            <button class="project-type webui2">Web UI</button>
+                            <button class="project-type hackathon">Hackathon</button>
+                        </div>
+                        <h3 class="project-title">Hamro Asraya - Hostel Rental Website</h3>
+                        <p class="project-description">
+                            Hamro Asraya is a student hostel rental platform with verified listings, real reviews, and smart filters—designed to make finding the right place simple and trustworthy.
+                        </p>
+                        <a href="#" class="project-link" data-project="asraya">See full case study →</a>
+                    </div>
+                </div>
+                
+                <div class="project-card project-3">
+                    <div class="project-content">
+                        <div class="project-badge">
+                            <button class="project-type webui2">Web UI</button>
+                            <button class="project-type mobileui">Mobile UI</button>
+                            <button class="project-type spa">Spa</button>
+                        </div>
+                        <h3 class="project-title">Auréa - Spa Web and Mobile</h3>
+                        <p class="project-description">
+                            Aurea Spa is a modern wellness and relaxation platform designed to simplify booking spa treatments, explore services, and enhance customer experience with a serene and user-friendly interface.
+                        </p>
+                        <a href="#" class="project-link" data-project="aurea">See full case study →</a>
+                    </div>
+                    <div class="project-image">
+                        <img src="/assets/aurea.png" alt="Auréa Project">
+                    </div>
+                </div>
+                
+                <div class="project-card project-4">
+                    <div class="project-image">
+                        <img src="/assets/posters.png" alt="Poster Designs Project"> 
+                    </div>
+                    <div class="project-content">
+                        <div class="project-badge">
+                            <button class="project-type graphic">Graphic Design</button>
+                            <button class="project-type poster">Poster Design</button>
+                        </div>
+                        <h3 class="project-title">Poster Designs - Club</h3>
+                        <p class="project-description">
+                            A collection of poster designs and pamphlets created for various events, campaigns, and organizations, showcasing creative visual communication.
+                        </p>
+                        <a href="#" class="project-link" data-project="posters">See Designs →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about-me fade-in-section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-philosophy">
+                    <blockquote class="philosophy-quote">
+                        "I believe design should simplify lives and tell stories. Every pixel has a purpose, every interaction should feel natural, and every design should make someone's day a little bit better."
+                    </blockquote>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-background">
+                        <h3 class="about-subtitle">Background & Journey</h3>
+                        <div class="background-items">
+                            <div class="background-item">
+                                <span class="bg-icon">
+                                    <img src="/assets/book.png" alt="Education Icon" class="bg-icon-image" width="110" height="80">
+                                </span>
+                                <div class="bg-content">
+                                    <h4>Education</h4>
+                                    <p><span class="bg-content-cap">Bachelor's in Computer Engineering</span> from Gandaki College of Engineering and Science.</p>
+                                </div>
+                            </div>
+                            <div class="background-item">
+                                <span class="bg-icon">
+                                    <img src="/assets/exp.png" alt="Experience Icon" class="bg-icon-image" width="110" height="80">
+                                </span>
+                                <div class="bg-content">
+                                    <h4>Experience</h4>
+                                    <p>
+                                        <span class="bg-content-cap">Fresh Intern</span> at 
+                                        <span class="bg-content-cap">FORA Technology</span> 
+                                        as a UI/UX Designer, working on real-world projects and collaborating with cross-functional teams.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="background-item">
+                                <span class="bg-icon">
+                                    <img src="/assets/ach.png" alt="Achievements Icon" class="bg-icon-image" width="110" height="80">
+                                </span>
+                                <div class="bg-content">
+                                    <h4>Achievements</h4>
+                                    <p><span class="bg-content-cap">Graphic Designer</span> at GCESgirls Tech, <span class="bg-content-cap">General Member</span> of Leo Club of Lakeside Pokhara.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-tools">
+                        <h3 class="about-subtitle">Tools & Skills</h3>
+                        <div class="tools-grid">
+                            <div class="tool-category">
+                                <h4 class="tool-category-title">Design Tools</h4>
+                                <div class="tool-tags">
+                                    <div class="tool-tags figma"><img src="/assets/1.png" alt="Figma" class="tool-tag-icon" width="100" height="100"></div>
+                                    <div class="tool-tags canva"><img src="/assets/2.png" alt="Canva" class="tool-tag-icon" width="100" height="100"></div>
+                                    <div class="tool-tags xd"><img src="/assets/3.png" alt="XD" class="tool-tag-icon" width="100" height="100"></div>
+                                    <div class="tool-tags notion"><img src="/assets/4.png" alt="Notion" class="tool-tag-icon" width="100" height="100"></div>
+                                </div>
+                            </div>
+                            <div class="tool-category">
+                                <h4 class="tool-category-title">Specialties</h4>
+                                <div class="tool-tags">
+                                    <span class="tool-tag">Prototyping</span>
+                                    <span class="tool-tag">User Research</span>
+                                    <span class="tool-tag">Wireframing</span>
+                                    <span class="tool-tag">Usability Testing</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-hobbies">
+                            <h3 class="about-subtitle">My Hobbies</h3>
+                            <div class="hobbies-grid">
+                                <div class="hobby-item">
+                                    <div class="hobby-icon hobby-reading">
+                                        <img src="assets/book-icon.png" alt="" class="hobby-image" aria-hidden="true" />
+                                    </div>
+                                    <p class="hobby-label">Books</p>
+                                </div>
+                                <div class="hobby-item">
+                                    <div class="hobby-icon hobby-plants">
+                                        <img src="assets/plant-icon.png" alt="" class="hobby-image" aria-hidden="true" />
+                                    </div>
+                                    <p class="hobby-label">Plant<br>Mom</p>
+                                </div>
+                                <div class="hobby-item">
+                                    <div class="hobby-icon hobby-music">
+                                        <img src="assets/music-icon.png" alt="" class="hobby-image" aria-hidden="true" />
+                                    </div>
+                                    <p class="hobby-label">Art</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Grid -->
+    <section class="certifications fade-in-section" id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-container">
+                <div class="certifications-grid" id="certificationsGrid">
+                    <!-- Page 1 - First 2 certificates -->
+                    <div class="cert-page active" data-page="0">
+                        <div class="certification-card">
+                            <div class="cert-image">
+                                <img src="/assets/meta.png"  class="certificate" alt="UI/UX Design Certificate">
+                            </div>
+                            <div class="cert-content">
+                                <div class="cert-badge">
+                                    <span class="cert-type design">Design</span>
+                                </div>
+                                <h3 class="cert-title">Principles of UI UX</h3>
+                                <p class="cert-issuer">Meta Coursera</p>
+                                <span class="cert-date">2024-2025</span>
+                            </div>
+                        </div>
+                        
+                        <div class="certification-card">
+                            <div class="cert-image">
+                                <img src="/assets/code.JPG"  class="certificate" alt= "Workshop Certificate">
+                            </div>
+                            <div class="cert-content">
+                                <div class="cert-badge">
+                                    <span class="cert-type tools">Workshop</span>
+                                </div>
+                                <h3 class="cert-title">UI UX Workshop</h3>
+                                <p class="cert-issuer">Code for Change</p>
+                                <span class="cert-date">2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Page 2 - Next 2 certificates -->
+                    <div class="cert-page" data-page="1">
+                        <div class="certification-card">
+                            <div class="cert-image">
+                                <img src="/assets/mentor.png"  class="certificate" alt="Mentor Certificate">
+                            </div>
+                            <div class="cert-content">
+                                <div class="cert-badge">
+                                    <span class="cert-type research">Workshop</span>
+                                </div>
+                                <h3 class="cert-title">Design Thinking and UI/UX</h3>
+                                <p class="cert-issuer">GCES GIRLS TECH</p>
+                                <span class="cert-date">2024</span>
+                            </div>
+                        </div>
+                        
+                        <div class="certification-card">
+                            <div class="cert-image">
+                                <img src="/assets/river.JPG"  class="certificate" alt="River Certificate">
+                            </div>
+                            <div class="cert-content">
+                                <div class="cert-badge">
+                                    <span class="cert-type systems">Environment</span>
+                                </div>
+                                <h3 class="cert-title">Rivers of the World</h3>
+                                <p class="cert-issuer">British Council</p>
+                                <span class="cert-date">2017</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Page 3 - Last 2 certificates -->
+                    <div class="cert-page" data-page="2">
+                        <div class="certification-card">
+                            <div class="cert-image">
+                                <img src="/assets/csit.png"  class="certificate" alt="Digital Marketing Certificate">
+                            </div>
+                            <div class="cert-content">
+                                <div class="cert-badge">
+                                    <span class="cert-type prototype">Digital Marketing</span>
+                                </div>
+                                <h3 class="cert-title">Digital Market Workshop</h3>
+                                <p class="cert-issuer">CSIT Association</p>
+                                <span class="cert-date">2024</span>
+                            </div>
+                        </div>
+                        
+                        <div class="certification-card">
+                            <div class="cert-image">
+                                <img src="/assets/docker.png"  class="certificate" alt="Docker Certificate">
+                            </div>
+                            <div class="cert-content">
+                                <div class="cert-badge">
+                                    <span class="cert-type accessibility">Docker</span>
+                                </div>
+                                <h3 class="cert-title">Docker Workshop</h3>
+                                <p class="cert-issuer">GCES GIRLS TECH</p>
+                                <span class="cert-date">2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 
+                <div class="cert-navigation">
+                    <button class="cert-nav-btn cert-prev" id="certPrevBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 18l-6-6 6-6" stroke="#2c2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Previous
+                    </button>
+                    <span class="cert-page-info" id="certPageInfo">Page 1 of 3</span>
+                    <button class="cert-nav-btn cert-next" id="certNextBtn">
+                        Next
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18l6-6-6-6" stroke="#2c2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact fade-in-section" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-grid">
+                    <div class="contact-left">
+                        <h2 class="contact-title">Connect with me!</h2>
+                        <p class="contact-subtitle">
+                            I'd love to hear from you! Whether it's a project collaboration, a question, or just to say hi, drop me a message below and I'll get back to you as soon as possible.
+                        </p>
+                        <div class="social-links">
+                            <a href="mailto:jastimilsina@gmail.com" class="social-link" aria-label="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/jasminetimilsina/" class="social-link" target="_blank" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i> 
+                            </a>
+                            <a href="https://dribbble.com/jastimilsina" class="social-link" target="_blank" aria-label="Dribbble">
+                                <i class="fab fa-dribbble"></i> 
+                            </a>
+                            <a href="https://www.behance.net/jasminetimilsi" class="social-link" target="_blank" aria-label="Behance">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your email" required>
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <textarea id="message" name="message" placeholder="Leave me a message." rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <span style="color: #b597d3; font-size: 30px;">✦</span>
+                        <span class="logo-text">Jasmine</span>
+                    </div>
+                    <p class="footer-description">
+                       UI UX Designer
+                    </p>
+                </div>
+                <div class="footer-right">
+                    <p class="footer-copyright">
+                        © 2024 Jasmine. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Case Study Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6l12 12" stroke="#2c2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            
+            <div class="modal-content" id="modalContent">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
