@@ -73,6 +73,17 @@ body {
   margin-top: 0.2rem;
 }
 
+.logo-link {
+  text-decoration: none; /* remove underline */
+  color: inherit; /* keep same text color as surrounding */
+  font-weight: bold; /* optional */
+  cursor: pointer;
+}
+
+.logo-link:hover {
+  opacity: 0.8; /* subtle hover effect */
+}
+
 /* Hamburger Menu */
 .nav-toggle {
   display: none;
