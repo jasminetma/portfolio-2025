@@ -1,5 +1,6 @@
 /* Reset and Base Styles */
 * {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -405,11 +406,29 @@ body {
   overflow: hidden;
 }
 
+.shadow-img {
+  width: 300px; /* adjust size */
+  border-radius: 12px; /* optional rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* shadow effect */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.shadow-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
 .project-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: filter 0.5s ease, transform 0.5s ease; 
+}
+
+.project-image:hover img {
+  filter: brightness(70%);
+  transform: scale(1.03);
 }
 
 .project-card.left {
@@ -474,6 +493,9 @@ body {
 
 .project-type.mobileui {
   background-color: #f7cb45;
+}
+.project-type.spa{
+  background-color: #b2b74e;
 }
 
 .project-title {
@@ -850,7 +872,7 @@ body {
 }
 
 .cert-nav-btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(2px);
   box-shadow: 2px 2px 0 #2c2324;
 }
 
@@ -993,8 +1015,8 @@ body {
   padding: 16px 40px;
   font-size: 16px;
   font-weight: 600;
-  border: 2px solid #2c2324;
-  border-radius: 20px;
+  border: 3px solid #2c2324;
+  border-radius: 999px;
   cursor: pointer;
   align-self: center;
   margin-top: 20px;
@@ -1005,7 +1027,7 @@ body {
 }
 
 .submit-button:hover {
-  transform: translateY(-2px);
+  transform: translateY(2px);
   box-shadow: 2px 2px 0 #2c2324;
 }
 
