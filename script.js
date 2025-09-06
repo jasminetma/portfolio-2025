@@ -1,6 +1,6 @@
 // ==================== GLOBAL VARIABLES ====================
 let currentCertPage = 0
-const totalCertPages = 3
+const totalCertPages = 4
 
 // ==================== MOBILE NAVIGATION ====================
 const navToggle = document.getElementById("nav-toggle")
